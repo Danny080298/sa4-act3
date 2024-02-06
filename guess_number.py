@@ -12,8 +12,12 @@ while try_guess != limited:
     try:
         guess = int(guess)
         if guess == number:
-            print("Congratulations, your guess is correct!")
+            print("Congratulations, your guess is correct!!!")
             break
+        elif guess > number:
+            print("Your guess is too high, try again!!")
+        elif guess < number:
+            print("Your guess is too low, try again!!")
         else:
             print(f"Invalid, try again, you have {limited- 1} trials lefts.")  
             limited -= 1
